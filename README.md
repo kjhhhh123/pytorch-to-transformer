@@ -7,7 +7,7 @@
 | 目录 | 内容 | 状态 |
 | --- | --- | --- |
 | [01_mlp](01_mlp/README.md) | 二维三分类 MLP：数据、训练、验证、保存与加载 | 已有可运行代码 |
-| 02_attention | Attention 与 Multi-Head Attention | 待实现 |
+| [02_attention](02_attention/README.md) | 开源 MHA、逐步数据流、因果遮挡、梯度与参数更新 | 已有可运行代码 |
 | 03_transformer | FFN 与 Transformer Block | 待实现 |
 | 04_tiny_gpt | 小 GPT 训练与生成 | 待实现 |
 
@@ -19,9 +19,10 @@
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 .venv/bin/python 01_mlp/train.py --device cpu
+.venv/bin/python 02_attention/demo_attention.py
 ```
 
 已有兼容的 Python / PyTorch 环境时，也可用该环境的解释器运行 `01_mlp/train.py`。
 默认 CPU、float32；数据由脚本生成，无需下载。
 
-运行结果写入 `01_mlp/outputs/`。虚拟环境、缓存、输出目录和模型权重已加入 `.gitignore`。
+运行结果写入各模块的 `outputs/`（例如 `01_mlp/outputs/` 和 `02_attention/outputs/`）。虚拟环境、缓存、输出目录和模型权重已加入 `.gitignore`。
